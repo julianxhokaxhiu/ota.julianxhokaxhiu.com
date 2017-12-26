@@ -15,7 +15,7 @@ This OTA Service is done using:
 #### Page Rule
 
 - **If the URL matches:** ota.julianxhokaxhiu.com/api/v1/\*/\*/\*
-- **Then the settings are:** Forwarding URL - 301 Permanent Redirect - https://ota.julianxhokaxhiu.com/api/v1/$1/$2/index.json
+- **Then the settings are:** Forwarding URL - 301 Permanent Redirect - https://ota.julianxhokaxhiu.com/v1/$1/$2/index.json
 
 ### Github
 
