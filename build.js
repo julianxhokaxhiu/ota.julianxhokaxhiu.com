@@ -128,6 +128,7 @@ const dumpEntries = async () => {
 
       await fs.ensureDir( apiPath )
       await fs.writeJson( `${apiPath}/index.json`, entry )
+      await fs.copy( 'README.md', '_dist/README.md' )
     }
   }
 }
