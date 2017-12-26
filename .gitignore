@@ -59,4 +59,4 @@ typings/
 
 # Custom
 /package-lock.json
-/api
+/_dist
