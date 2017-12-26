@@ -1,5 +1,4 @@
 const fs = require('fs-extra'),
-      path = require('path'),
       uuid = require('uuid/v1'),
       JSFtp = require('jsftp'),
       ftpHost = process.env.FTP_HOST || 'speedtest.tele2.net',
@@ -71,7 +70,7 @@ const parseZipFilename = (filename, timestamp, md5) => {
     'url': `${baseUrl}/${deviceName}/${filename}`,
     'timestamp': timestamp,
     'md5sum': md5,
-    'changes': `${baseUrl}/${deviceName}/${path.basename(filename)}.txt`,
+    'changes': `${baseUrl}/${deviceName}/${filename.replace('.zip', '.txt')}`,
     'channel': buildType,
     'filename': filename,
     // LineageOS
