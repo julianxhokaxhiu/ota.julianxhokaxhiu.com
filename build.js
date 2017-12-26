@@ -5,7 +5,7 @@ const fs = require('fs-extra'),
       ftpHost = process.env.FTP_HOST || 'speedtest.tele2.net',
       ftpUser = process.env.FTP_USER || 'anonymous',
       ftpPass = process.env.FTP_PASS || 'anonymous@',
-      baseUrl = process.env.OTA_BASEURL || 'https://basketbuild.com/uploads/devs/JulianXhokaxhiu',
+      baseUrl = process.env.OTA_BASEURL || '',
       zipRegEx = /(cm|lineage)-([0-9\.]+)-([\d_]+)?-([\w+]+)-([A-Za-z0-9]+)?-?([\w+]+)?/,
       ftp = new JSFtp({
         host: ftpHost,
@@ -68,10 +68,10 @@ const parseZipFilename = (filename, timestamp, md5) => {
     // CyanogenMod
     'incremental': '',
     'api_level': '',
-    'url': `${baseUrl}/${filename}`,
+    'url': `${baseUrl}/${deviceName}/${filename}`,
     'timestamp': timestamp,
     'md5sum': md5,
-    'changes': `${baseUrl}/${path.basename(filename)}.txt`,
+    'changes': `${baseUrl}/${deviceName}/${path.basename(filename)}.txt`,
     'channel': buildType,
     'filename': filename,
     // LineageOS
