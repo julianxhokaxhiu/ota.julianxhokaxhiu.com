@@ -19,10 +19,10 @@ This OTA Service is done using:
 
 ### Github
 
-```shell
-$ npm install
-$ npm run build
-```
+Code repository where the generation script lives. Two branches exists:
+
+- **master** source code for the script and the `.travis.yml` automated instructions
+- **gh-pages** the API responses you see ( including this page, if visited from https://ota.julianxhokaxhiu.com )
 
 ### Travis
 
