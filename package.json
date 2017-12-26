@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/ServerlessOTA/api/issues"
   },
-  "homepage": "https://github.com/ServerlessOTA/api#readme"
+  "homepage": "https://github.com/ServerlessOTA/api#readme",
+  "devDependencies": {
+    "fs-extra": "^5.0.0",
+    "jsftp": "^2.1.2",
+    "uuid": "^3.1.0"
+  }
 }
