@@ -77,7 +77,7 @@ const parseZipFilename = (filename, timestamp, md5) => {
     'romtype': buildType,
     'datetime': timestamp,
     'version': version,
-    'id': uuid().replace('-', ''),
+    'id': uuid().replace(/-/g, ''),
   })
 }
 
