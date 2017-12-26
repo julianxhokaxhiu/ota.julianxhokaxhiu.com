@@ -1,4 +1,4 @@
-# ServerlessOTA
+# Serverless LineageOS OTA
 Fully Automated Serverless OTA Service for LineageOS
 
 ## Architecture
