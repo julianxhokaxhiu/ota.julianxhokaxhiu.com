@@ -13,7 +13,7 @@ script:
 - npm run build
 
 deploy:
-  local_dir: api/
+  local_dir: _dist/
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN

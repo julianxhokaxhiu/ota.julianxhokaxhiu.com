@@ -119,7 +119,7 @@ const parseEntries = async ( entries ) => {
 const dumpEntries = async () => {
   for ( var deviceType in res ) {
     for ( var buildType in res[deviceType] ) {
-      const apiPath = `api/v1/${deviceType}/${buildType}`,
+      const apiPath = `_dist/api/v1/${deviceType}/${buildType}`,
             entry = {
               id: null,
               error: null,
