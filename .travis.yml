@@ -19,4 +19,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   fqdn: ota.julianxhokaxhiu.com
   on:
-    branch: gh-pages
+    branch: master
