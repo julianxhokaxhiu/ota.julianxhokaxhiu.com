@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "api",
+  "version": "0.0.1",
+  "description": "Fully Automated Serverless OTA Service for LineageOS, using Github and Basketbuild",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ServerlessOTA/api.git"
+  },
+  "keywords": [],
+  "author": "Julian Xhokaxhiu <info at julianxhokaxhiu dot com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ServerlessOTA/api/issues"
+  },
+  "homepage": "https://github.com/ServerlessOTA/api#readme"
+}
