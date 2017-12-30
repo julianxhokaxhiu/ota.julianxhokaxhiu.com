@@ -77,7 +77,7 @@ const parseZipFilename = async (filename, timestamp) => {
    */
   const matches = filename.match(zipRegEx)
   let deviceName = matches ? matches[5] : 'foo',
-    buildType = matches ? matches[4] : 'bar',
+    buildType = matches ? matches[4].toLowerCase() : 'bar',
     version = matches ? matches[2] : '',
     md5 = await getMD5Sum( filename, deviceName )
 
