@@ -106,7 +106,7 @@ const parseEntries = async ( entries ) => {
       if ( entry.type === 1 /* FTP_DIRECTORY */ ) {
         const newEntries = await getEntries( entry.name )
         await parseEntries( newEntries )
-      } else {
+      } else if ( entry.name.split('.').pop() === 'zip' ) {
         parseZipFilename( entry.name, entry.time, await getMD5Sum( entry.name ) )
       }
     }
