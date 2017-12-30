@@ -1,6 +1,12 @@
 # Serverless LineageOS OTA
 Fully Automated Serverless OTA Service for LineageOS
 
+## API Calls example
+
+> Those API calls are just to show the potential of this Serverless stack.
+
+Huawei Y635: https://ota.julianxhokaxhiu.com/api/v1/hwY635/UNOFFICIAL/2d0af02b32
+
 ## Architecture
 
 This OTA Service is done using:
