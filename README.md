@@ -38,4 +38,6 @@ See [.travis.yml](.travis.yml) for more informations.
 
 ### Basketbuild
 
+> **WARNING:** delete any other directory in the root folder. Only device folders are allowed!
+
 All my ZIP files are uploaded inside to the device type directory ( eg. `/hammerhead/lineage-14.1-20171224_000325-UNOFFICIAL-hammerhead.zip` ).
