@@ -14,15 +14,45 @@ const fs = require('fs-extra'),
       res = {}
 
 // Helpers
-const getMD5Sum = ( filename ) => {
+const getMD5Sum = ( filename, deviceName ) => {
   return new Promise(
     ( resolve, reject ) => {
       ftp.raw(
         `XMD5 filename`,
         (err, res) => {
-          if ( err )
-            resolve('')
-          else
+          if ( err ) {
+            ftp.get(
+              `/${deviceName}/${filename}.md5sum`,
+              ( err, socket ) => {
+                if ( err ) {
+                  resolve('')
+                } else {
+                  let md5 = ''
+
+                  socket.on(
+                    'data',
+                    data => {
+                      md5 += data.toString()
+                    }
+                  )
+
+                  socket.on(
+                    'close',
+                    err => {
+                      if (err)
+                        resolve('')
+                      else
+                        resolve(
+                          md5.split('  ')[0]
+                        )
+                    }
+                  )
+
+                  socket.resume()
+                }
+              }
+            )
+          } else
             resolve( res )
         }
       )
@@ -30,7 +60,7 @@ const getMD5Sum = ( filename ) => {
   )
 }
 
-const parseZipFilename = (filename, timestamp, md5) => {
+const parseZipFilename = async (filename, timestamp) => {
   /**
    * [
       1 => [TYPE] (ex. cm, lineage, etc.)
@@ -48,7 +78,8 @@ const parseZipFilename = (filename, timestamp, md5) => {
   const matches = filename.match(zipRegEx)
   let deviceName = matches ? matches[5] : 'foo',
     buildType = matches ? matches[4] : 'bar',
-    version = matches ? matches[2] : ''
+    version = matches ? matches[2] : '',
+    md5 = await getMD5Sum( filename, deviceName )
 
   switch (buildType) {
     case 'unofficial':
@@ -107,7 +138,7 @@ const parseEntries = async ( entries ) => {
         const newEntries = await getEntries( entry.name )
         await parseEntries( newEntries )
       } else if ( entry.name.split('.').pop() === 'zip' ) {
-        parseZipFilename( entry.name, entry.time, await getMD5Sum( entry.name ) )
+        await parseZipFilename( entry.name, entry.time )
       }
     }
   } catch ( ex ) {
