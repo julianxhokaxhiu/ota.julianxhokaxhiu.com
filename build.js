@@ -45,8 +45,8 @@ const parseZipFilename = (filename, timestamp, md5) => {
         LINEAGE => [SIGNED] (ex. signed)
       ]
    */
-  const matches = filename.match(zipRegEx),
-    deviceName = matches ? matches[5].toLowerCase() : 'foo',
+  const matches = filename.match(zipRegEx)
+  let deviceName = matches ? matches[5].toLowerCase() : 'foo',
     buildType = matches ? matches[4].toLowerCase() : 'bar',
     version = matches ? matches[2] : ''
 
