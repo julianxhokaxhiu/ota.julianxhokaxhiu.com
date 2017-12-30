@@ -46,8 +46,8 @@ const parseZipFilename = (filename, timestamp, md5) => {
       ]
    */
   const matches = filename.match(zipRegEx)
-  let deviceName = matches ? matches[5].toLowerCase() : 'foo',
-    buildType = matches ? matches[4].toLowerCase() : 'bar',
+  let deviceName = matches ? matches[5] : 'foo',
+    buildType = matches ? matches[4] : 'bar',
     version = matches ? matches[2] : ''
 
   switch (buildType) {
