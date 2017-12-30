@@ -5,7 +5,7 @@ Fully Automated Serverless OTA Service for LineageOS
 
 > Those API calls are just to show the potential of this Serverless stack.
 
-Huawei Y635: https://ota.julianxhokaxhiu.com/api/v1/hwY635/UNOFFICIAL/2d0af02b32
+Huawei Y635: [https://ota.julianxhokaxhiu.com/api/v1/hwY635/UNOFFICIAL/2d0af02b32](https://ota.julianxhokaxhiu.com/api/v1/hwY635/UNOFFICIAL/2d0af02b32)
 
 ## Architecture
 
@@ -20,8 +20,8 @@ This OTA Service is done using:
 
 #### Page Rule
 
-- **If the URL matches:** ota.julianxhokaxhiu.com/api/v1/\*/\*/\*
-- **Then the settings are:** Forwarding URL - 301 Permanent Redirect - https://ota.julianxhokaxhiu.com/v1/$1/$2/index.json
+- **If the URL matches:** `ota.julianxhokaxhiu.com/api/v1/*/*/*`
+- **Then the settings are:** `Forwarding URL - 301 Permanent Redirect - https://ota.julianxhokaxhiu.com/v1/$1/$2/index.json`
 
 ### Github
 
@@ -46,4 +46,4 @@ See [.travis.yml](.travis.yml) for more informations.
 
 > **WARNING:** delete any other directory in the root folder. Only device folders are allowed!
 
-All my ZIP files are uploaded inside to the device type directory ( eg. `/hammerhead/lineage-14.1-20171224_000325-UNOFFICIAL-hammerhead.zip` ).
+All my ZIP files are uploaded inside to the device type directory ( eg. `/hwY635/lineage-14.1-20171226_235653-UNOFFICIAL-hwY635.zip` ).
