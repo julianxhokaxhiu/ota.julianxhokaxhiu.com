@@ -5,7 +5,7 @@ Fully Automated Serverless OTA Service for LineageOS
 
 > Those API calls are just to show the potential of this Serverless stack.
 
-Huawei Y635: [https://ota.julianxhokaxhiu.com/api/v1/hwY635/UNOFFICIAL/2d0af02b32](https://ota.julianxhokaxhiu.com/api/v1/hwY635/UNOFFICIAL/2d0af02b32)
+Huawei Y635: [https://ota.julianxhokaxhiu.com/api/v1/hwY635/unofficial/2d0af02b32](https://ota.julianxhokaxhiu.com/api/v1/hwY635/unofficial/2d0af02b32)
 
 ## Architecture
 
