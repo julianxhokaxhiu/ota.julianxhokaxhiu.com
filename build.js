@@ -81,16 +81,6 @@ const parseZipFilename = async (filename, timestamp) => {
     version = matches ? matches[2] : '',
     md5 = await getMD5Sum( filename, deviceName )
 
-  switch (buildType) {
-    case 'unofficial':
-      buildType = 'nightly'
-      break
-    case 'experimental':
-      buildType = 'snapshot'
-      break
-    default:
-  }
-
   if (!(deviceName in res)) res[deviceName] = {}
   if (!(buildType in res[deviceName])) res[deviceName][buildType] = []
 
