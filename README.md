@@ -1,6 +1,11 @@
 # Serverless LineageOS OTA
 Fully Automated Serverless OTA Service for LineageOS
 
+## Patch Review required!
+
+In order to work, this new Serverless methodology requires that the Updater app follows redirects.
+A patch has already been submitted, if approved make sure your ROM build has it inside: [https://review.lineageos.org/#/c/200540/](https://review.lineageos.org/#/c/200540/)
+
 ## API Calls example
 
 > Those API calls are just to show the potential of this Serverless stack.
