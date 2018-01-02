@@ -128,7 +128,7 @@ const parseEntries = async ( entries ) => {
         const newEntries = await getEntries( entry.name )
         await parseEntries( newEntries )
       } else if ( entry.name.split('.').pop() === 'zip' ) {
-        await parseZipFilename( entry.name, entry.time )
+        await parseZipFilename( entry.name, ( entry.time / 1000 ) )
       }
     }
   } catch ( ex ) {
