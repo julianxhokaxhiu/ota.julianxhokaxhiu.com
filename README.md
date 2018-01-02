@@ -1,10 +1,9 @@
 # Serverless LineageOS OTA
 Fully Automated Serverless OTA Service for LineageOS
 
-## Patch Review required!
+## HTTP to HTTPS redirect warning
 
-In order to work, this new Serverless methodology requires that the Updater app follows redirects.
-A patch has already been submitted, if approved make sure your ROM build has it inside: [https://review.lineageos.org/#/c/200540/](https://review.lineageos.org/#/c/200540/)
+If you are willing to use HTTP URLs and one day you decide to switch to HTTPS, remember that the Updater app will NOT follow the redirect when the protocol changes. Therefore only HTTP -> HTTP or HTTPS -> HTTPS redirects are allowed.
 
 ## API Calls example
 
