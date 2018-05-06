@@ -158,9 +158,13 @@ const main = async () => {
     // Get main FTP directory files
     const entries = await getEntries( '/' )
 
-    await parseEntries( entries )
+    if ( entries.length ) {
+      await parseEntries( entries )
 
-    dumpEntries()
+      dumpEntries()
+    } else
+      // Always create an empty directory, to avoid Travis failing the deploy
+      await fs.ensureDir( '_dist/' )
 
     ftp.destroy()
   } catch ( ex ) {
