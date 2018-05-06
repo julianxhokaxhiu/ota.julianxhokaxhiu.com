@@ -148,9 +148,14 @@ const dumpEntries = async () => {
 
       await fs.ensureDir( apiPath )
       await fs.writeJson( `${apiPath}/index.json`, entry )
-      await fs.copy( 'README.md', '_dist/README.md' )
     }
   }
+}
+
+const copyMiscFiles = async () => {
+  await fs.ensureDir( '_dist' )
+
+  await fs.copy( 'README.md', '_dist/README.md' )
 }
 
 const main = async () => {
@@ -158,13 +163,11 @@ const main = async () => {
     // Get main FTP directory files
     const entries = await getEntries( '/' )
 
-    if ( entries.length ) {
-      await parseEntries( entries )
+    await parseEntries( entries )
 
-      dumpEntries()
-    } else
-      // Always create an empty directory, to avoid Travis failing the deploy
-      await fs.ensureDir( '_dist/' )
+    dumpEntries()
+
+    copyMiscFiles()
 
     ftp.destroy()
   } catch ( ex ) {
