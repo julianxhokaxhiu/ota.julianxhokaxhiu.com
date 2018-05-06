@@ -7,7 +7,7 @@ If you are willing to use HTTP URLs and one day you decide to switch to HTTPS, r
 
 ## API Calls example
 
-> Those API calls are just to show the potential of this Serverless stack.
+> Those API calls are just to show the potential of this Serverless stack. They may work ( or may not ) depending on which files I do have uploaded currently on my Basketbuild account.
 
 Huawei Y635: [https://ota.julianxhokaxhiu.com/api/v1/hwY635/unofficial/2d0af02b32](https://ota.julianxhokaxhiu.com/api/v1/hwY635/unofficial/2d0af02b32)
 
